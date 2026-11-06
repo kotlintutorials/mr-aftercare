@@ -6,3 +6,6 @@ export const max = (xs) => (xs.length ? Math.max(...xs) : undefined);
 
 /** The smallest of a list of numbers; undefined for an empty list. */
 export const min = (xs) => (xs.length ? Math.min(...xs) : undefined);
+
+/** The mean of a list of numbers; undefined for an empty list. */
+export const mean = (xs) => (xs.length ? sum(xs) / xs.length : undefined);
