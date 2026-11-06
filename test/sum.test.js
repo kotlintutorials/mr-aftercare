@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { max, mean, min, sum } from "../src/sum.js";
+import { max, mean, median, min, sum } from "../src/sum.js";
 
 describe("sum", () => {
 	it("adds a list", () => {
@@ -26,5 +26,13 @@ describe("mean", () => {
 	it("averages a list, or gives nothing for an empty one", () => {
 		expect(mean([1, 2, 3])).toBe(2);
 		expect(mean([])).toBeUndefined();
+	});
+});
+
+describe("median", () => {
+	it("finds the middle, or the mean of the two middles, or nothing in an empty list", () => {
+		expect(median([3, 1, 2])).toBe(2);
+		expect(median([4, 1, 3, 2])).toBe(2.5);
+		expect(median([])).toBeUndefined();
 	});
 });
