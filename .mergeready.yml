@@ -1,10 +1,11 @@
-# After-care on merged changes under src/: a release-notes line, a backport to release/1.x, and a deploy watch.
+# After-care on merged changes to the code and its tests: a release-notes line, a backport to release/1.x, and a deploy
+# watch.
 version: 1
 default:
   level: observe
 paths:
   - name: source
-    match: ['src/**']
+    match: ['src/**', 'test/**']
     level: propose
 post_merge:
   release_notes: true
