@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { max, sum } from "../src/sum.js";
+import { max, min, sum } from "../src/sum.js";
 
 describe("sum", () => {
 	it("adds a list", () => {
@@ -12,5 +12,12 @@ describe("max", () => {
 	it("finds the largest, or nothing in an empty list", () => {
 		expect(max([1, 3, 2])).toBe(3);
 		expect(max([])).toBeUndefined();
+	});
+});
+
+describe("min", () => {
+	it("finds the smallest, or nothing in an empty list", () => {
+		expect(min([3, 1, 2])).toBe(1);
+		expect(min([])).toBeUndefined();
 	});
 });
