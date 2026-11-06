@@ -9,7 +9,7 @@ describe("sum", () => {
 });
 
 describe("max", () => {
-	it("finds the largest", () => {
+	it("finds the largest, or nothing in an empty list", () => {
 		expect(max([1, 3, 2])).toBe(3);
 		expect(max([])).toBeUndefined();
 	});
